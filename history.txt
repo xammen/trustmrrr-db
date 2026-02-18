@@ -121,3 +121,4 @@
 2026-02-17T23:50:00.000Z | xammen | nemmaxemail@gmail.com | Fix typo
 2026-02-18T02:50:00.000Z | xammen | nemmaxemail@gmail.com | Update documentation
 2026-02-18T05:46:00.000Z | xammen | nemmaxemail@gmail.com | Update version
+2026-02-18T08:44:00.000Z | xammen | nemmaxemail@gmail.com | Add example
