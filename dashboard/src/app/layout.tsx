@@ -13,6 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script src="https://cdn.visitors.now/v.js" data-token="b0adf01d-fa2b-401e-bcab-cfc6262df06b" defer />
+      </head>
       <body>{children}</body>
     </html>
   );
