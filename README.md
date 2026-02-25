@@ -7,6 +7,8 @@
 a dark, minimal dashboard for exploring the entire [trustmrr.com](https://trustmrr.com) database.
 find deals, spot growth, track risk — all in one place ˚ʚ♡ɞ˚
 
+> **☁ live now at [trustmrr.hiii.boo](https://trustmrr.hiii.boo)** — no install, just open and explore.
+
 ```
                     ┌───────────────────┐
    986 startups ──► │  ༼ つ ╹ ╹ ༽つ      │  ──►  deal radar
