@@ -1,5 +1,7 @@
 # ✩°｡⋆⸜ trustmrrr ⸝⋆｡°✩
 
+[![Dashboard](https://img.shields.io/badge/dashboard-trustmrr.hiii.boo-0a0a0a?style=for-the-badge&logo=cloudflare&logoColor=white)](https://trustmrr.hiii.boo) [![Download JSON](https://img.shields.io/badge/download-database.json_(2.1MB)-333?style=for-the-badge&logo=json&logoColor=white)](https://raw.githubusercontent.com/xammen/trustmrrr-db/main/trustmrr-database.json) [![GitHub](https://img.shields.io/badge/github-trustmrrr--db-1a1a1a?style=for-the-badge&logo=github&logoColor=white)](https://github.com/xammen/trustmrrr-db)
+
 **986 startups. every mrr. every revenue. scraped, verified, searchable.**
 
 a dark, minimal dashboard for exploring the entire [trustmrr.com](https://trustmrr.com) database.
