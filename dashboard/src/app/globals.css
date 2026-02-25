@@ -1,0 +1,218 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0a;
+  --color-bg-card: #111111;
+  --color-bg-card-hover: #161616;
+  --color-bg-input: #0e0e0e;
+  --color-border: #1a1a1a;
+  --color-border-hover: #2a2a2a;
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary: #888888;
+  --color-text-muted: #555555;
+  --color-text-dim: #444444;
+  --color-accent: #888888;
+  --color-accent-hover: #aaaaaa;
+  --color-green: #4ade80;
+  --color-red: #f87171;
+  --color-amber: #fbbf24;
+  --color-blue: #60a5fa;
+  --color-purple: #a78bfa;
+  --color-chart-1: #555555;
+  --color-chart-2: #666666;
+  --color-chart-3: #777777;
+  --color-chart-4: #888888;
+  --color-chart-5: #999999;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono@latest/fonts/webfonts/JetBrainsMono-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono@latest/fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono@latest/fonts/webfonts/JetBrainsMono-Medium.woff2') format('woff2');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-mono);
+  font-weight: 300;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  min-height: 100vh;
+}
+
+::selection {
+  background: #333;
+  color: #e0e0e0;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+input, select, button {
+  font-family: var(--font-mono);
+  font-weight: 300;
+}
+
+/* animate on mount */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInSlow {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-fade-in-slow {
+  animation: fadeInSlow 0.6s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.animate-count-up {
+  animation: countUp 0.3s ease-out forwards;
+}
+
+/* stagger children */
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 60ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 120ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 180ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 240ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 300ms; }
+.stagger-children > *:nth-child(7) { animation-delay: 360ms; }
+.stagger-children > *:nth-child(8) { animation-delay: 420ms; }
+
+/* table row hover */
+.table-row {
+  transition: background-color 0.15s ease;
+}
+
+.table-row:hover {
+  background-color: var(--color-bg-card-hover);
+}
+
+/* tooltip */
+.tooltip {
+  position: relative;
+}
+
+/* pill badge */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 0.65rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.pill-green {
+  border-color: #1a3a1a;
+  background: #0a1a0a;
+  color: var(--color-green);
+}
+
+.pill-red {
+  border-color: #3a1a1a;
+  background: #1a0a0a;
+  color: var(--color-red);
+}
+
+.pill-amber {
+  border-color: #3a2a0a;
+  background: #1a1500;
+  color: var(--color-amber);
+}
+
+.pill-blue {
+  border-color: #1a2a3a;
+  background: #0a1520;
+  color: var(--color-blue);
+}
+
+/* for sale tag */
+.for-sale-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: #1a0a0a;
+  border: 1px solid #2a1515;
+  color: #f87171;
+}
